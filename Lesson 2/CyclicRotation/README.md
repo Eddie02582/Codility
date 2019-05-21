@@ -12,7 +12,7 @@ that, given an array A consisting of N integers and an integer K, returns the ar
 For example, given</br>
 
 &nbsp&nbsp&nbsp    A = [3, 8, 9, 7, 6]</br>
-&nbsp&nbsp&nbsp     K = 3
+&nbsp&nbsp&nbsp    K = 3</br>
 the function should return [9, 7, 6, 3, 8]. Three rotations were made:</br>
 
     [3, 8, 9, 7, 6] -> [6, 3, 8, 9, 7]</br>
