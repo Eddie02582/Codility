@@ -111,7 +111,7 @@ def solution(A):
         sum^=i
     
     return 1 if sum == 0 else 0;   
-```csharp
+```
 
 
 
