@@ -53,7 +53,7 @@ Write an efficient algorithm for the following assumptions:</br>
 
 分析:給定一bool 陣列長度為X,使用Count 計數，當陣列值皆為true(count等於X) 即表示1,..,X皆出現
 
-
+C#
 ```csharp
 using System;
 class Solution {
@@ -80,10 +80,12 @@ class Solution {
 	
 }
 ```
- 
+
+python 
+
 
 ```python
-def solution2(X, A):
+def solution(X, A):
     tiles=[Fasle]*X
     count=0  
     for i,value in enumerate(A)	
@@ -100,7 +102,7 @@ def solution2(X, A):
 分析:題目有說A的值[1..X]不然這方法會有問題，建立一個set 陣列 當set 陣列長度==X 即表示1..X皆出現
 
 
-
+python 
 ```python
 def solution(X, A):
 	S = set()
@@ -113,7 +115,7 @@ def solution(X, A):
 ```    
 
 若題目沒說加上判斷是 A[i]<=X 即可以
-
+C#
 ```csharp
 using System;
 using System.Collections.Generic;
