@@ -14,10 +14,10 @@ For example, given</br>
 A = [3, 8, 9, 7, 6]</br>
 K = 3 </br>
 the function should return [9, 7, 6, 3, 8]. Three rotations were made:</br>
-
-    [3, 8, 9, 7, 6] -> [6, 3, 8, 9, 7]</br>
-    [6, 3, 8, 9, 7] -> [7, 6, 3, 8, 9]</br>
-    [7, 6, 3, 8, 9] -> [9, 7, 6, 3, 8]</br>
+    [3, 8, 9, 7, 6] -> [6, 3, 8, 9, 7]
+    [6, 3, 8, 9, 7] -> [7, 6, 3, 8, 9]
+    [7, 6, 3, 8, 9] -> [9, 7, 6, 3, 8]
+    
 For another example, given </br>
     A = [0, 0, 0]</br>
     K = 1</br>
@@ -25,8 +25,8 @@ the function should return [0, 0, 0] </br>
 
 Given </br>
 
-    A = [1, 2, 3, 4] </br>
-    K = 4 </br>
+    A = [1, 2, 3, 4] 
+    K = 4 
 the function should return [1, 2, 3, 4] </br>
 
 Assume that:
