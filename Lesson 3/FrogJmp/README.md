@@ -37,7 +37,7 @@ Write an efficient algorithm for the following assumptions:</br>
 
 分析:(目地-起始位置)/步伐 ，無條件取整數
 
-
+C#
 ```csharp
 using System;
 // you can also use other imports, for example:

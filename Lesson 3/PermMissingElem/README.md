@@ -33,7 +33,7 @@ Write an efficient algorithm for the following assumptions:</br>
 
 分析:若A長度為4,假設A=[2,3,1,5]，(1+...+(N+1))總和-A總和 ，即為消失的數字</br> 
 
-
+C#
 ```csharp
 using System;
 using System.Linq;
@@ -62,7 +62,7 @@ class Solution {
 
 
 分析:利用XOR，A總和XOR (1+...+(N+1))總和，下面分別sum(A)^(1+...+(N))，最後在XOR N+1</br>
-
+C#
 ```csharp
 using System;
 using System.Linq;

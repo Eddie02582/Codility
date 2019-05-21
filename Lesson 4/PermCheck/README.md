@@ -58,7 +58,7 @@ Write an efficient algorithm for the following assumptions:</br>
 
 分析:排序並且一一比較,注意使用XOR或SUM會有問題 Ex A=[4,4,1,1] SUM(A)=SUM([4,1,2,3]),題目沒說給陣列裡的數字只會出現一次
 
-
+C#
 ```csharp
 using System;
 class Solution {
@@ -78,6 +78,7 @@ class Solution {
 
 分析:先利用set判斷是否有無重複數字，再利用XOR 判斷 
 
+C#
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -98,7 +99,7 @@ class Solution {
     }
 }
 ```
-
+python
 ```python
 def solution(A):
     # write your code in Python 3.6

@@ -51,7 +51,7 @@ Write an efficient algorithm for the following assumptions:</br>
 
 分析:右邊值為總合,左邊為零,最小值一開始為right - 2*A[0]絕對值,當指針(i)往右,右邊值-A[i],左邊值
 
-
+C#
 ```csharp
 using System;
 using System.Linq;
@@ -83,6 +83,7 @@ class Solution {
 
 分析:利用XOR，A總和XOR (1+...+(N+1))總和，下面分別sum(A)^(1+...+(N))，最後在XOR N+1</br>
 
+C#
 ```csharp
 using System;
 using System.Linq;

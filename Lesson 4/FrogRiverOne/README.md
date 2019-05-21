@@ -114,7 +114,7 @@ def solution(X, A):
 	return -1
 ```    
 
-若題目沒說加上判斷是 A[i]<=X 即可以
+若題目沒說加上判斷是 A[i]<=X 即可以</br>
 C#
 ```csharp
 using System;
