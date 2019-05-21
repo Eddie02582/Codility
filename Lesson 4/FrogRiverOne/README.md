@@ -57,8 +57,8 @@ C#
 ```csharp
 using System;
 class Solution {
-    public int solution(int X, int[] A) 
-	{
+    public int solution(int X, int[] A){ 
+	
         bool[] tiles = new bool[X];
         int count = 0;
 
@@ -120,8 +120,8 @@ C#
 using System;
 using System.Collections.Generic;
 class Solution {
-    public int solution(int X, int[] A) 
-	{
+    public int solution(int X, int[] A){ 
+	
         HashSet<int> hash = new HashSet<int>();
         for(int i=0;i<A.Length;i++)
         {
