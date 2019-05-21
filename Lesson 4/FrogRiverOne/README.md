@@ -122,17 +122,17 @@ using System.Collections.Generic;
 class Solution {
     public int solution(int X, int[] A) 
 	{
-      HashSet<int> hash = new HashSet<int>();
-	  for(int i=0;i<A.Length;i++)
-	  {
-          if(A[i]<=X)
-		  {
-			hash.Add(A[i]);
-			if(hash.Count == X)
-				return i;
-		  }
-	  }
-	  return -1;
+        HashSet<int> hash = new HashSet<int>();
+        for(int i=0;i<A.Length;i++)
+        {
+            if(A[i]<=X)
+            {
+                hash.Add(A[i]);
+                if(hash.Count == X)
+                    return i;
+            }
+        }
+        return -1;
     }
 	
 }
