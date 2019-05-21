@@ -9,5 +9,6 @@ Lesson 1 <a href ="https://github.com/Eddie02582/Codility/tree/master/Lesson%201
 
 Lesson 2 <a href ="https://github.com/Eddie02582/Codility/tree/master/Lesson%201"> Arrays</a>
 <ul>
-    <li><a href ="https://github.com/Eddie02582/Codility/tree/master/Lesson%201/BinaryGap">BinaryGap</a></li>
+    <li><a href ="https://github.com/Eddie02582/Codility/tree/master/Lesson%202/OddOccurrencesInArray">OddOccurrencesInArray</a></li>
+    <li><a href ="https://github.com/Eddie02582/Codility/tree/master/Lesson%202/CyclicRotation">CyclicRotation</a></li>
 </ul>
