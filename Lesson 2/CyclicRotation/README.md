@@ -11,24 +11,23 @@ that, given an array A consisting of N integers and an integer K, returns the ar
 
 For example, given</br>
 
-### A = [3, 8, 9, 7, 6] ###
-<p>  K = 3 </p>
+A = [3, 8, 9, 7, 6]</br>
+K = 3 </br>
 the function should return [9, 7, 6, 3, 8]. Three rotations were made:</br>
 
     [3, 8, 9, 7, 6] -> [6, 3, 8, 9, 7]</br>
     [6, 3, 8, 9, 7] -> [7, 6, 3, 8, 9]</br>
     [7, 6, 3, 8, 9] -> [9, 7, 6, 3, 8]</br>
-For another example, given</br>
-
+For another example, given </br>
     A = [0, 0, 0]</br>
     K = 1</br>
-the function should return [0, 0, 0]</br>
+the function should return [0, 0, 0] </br>
 
-Given</br>
+Given </br>
 
-    A = [1, 2, 3, 4]</br>
-    K = 4</br>
-the function should return [1, 2, 3, 4]</br>
+    A = [1, 2, 3, 4] </br>
+    K = 4 </br>
+the function should return [1, 2, 3, 4] </br>
 
 Assume that:
 <ul>
@@ -38,7 +37,7 @@ Assume that:
 
 
 
-分析:ex:5 ^5 =0 ,利用xor取得非成對的數字
+分析:向右移動的步數可以簡化成K除A取餘數，新的位置的值及為原本位置的值加上移動的部數。注意輸入Array 為null
 
 
 ```csharp
@@ -50,23 +49,33 @@ using System.Linq;
 // you can write to stdout for debugging purposes, e.g.
 // Console.WriteLine("this is a debug message");
 
-class Solution {	
-	
-	//O(N) or O(N*log(N))
-	public int solution(int[] A) {        
-        int sum = 0;        
-        foreach (int num in A)
-            sum ^= num;            
-        return sum;
+class Solution {
+    
+	public int[] solution(int[] A, int K) {
+        // write your code in C# 6.0 with .NET 4.5 (Mono)
+        int len=A.Length;
+        if (len==0)
+            return new int[] { };    
+            
+        int Count = K % len;
+        int[] B = new int[len];
+        for (int i = 0; i < len; i++)
+        {
+            B[(i + Count) % len] = A[i];
+        }
+        return B;
 
     }
 }
 ```
 
+分析:向右移動的步數可以簡化成K%len(A)，利用切片直接取得平移後的位置
+
 ```python
-def solutionByXOR(A):
-    result = 0
-    for number in A:
-        result ^= number
-    return result
+def solution(A, K): 
+	if A:
+		move=K%len(A)
+		return  A[len(A)-move:]+A[:len(A)-move] 
+	else:		
+		return  []
 ```
