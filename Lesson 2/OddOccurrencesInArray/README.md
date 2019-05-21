@@ -1,4 +1,4 @@
-# BinaryGap
+# OddOccurrencesInArray
 
 <a href="https://app.codility.com/programmers/lessons/2-arrays/odd_occurrences_in_array/">原文</a>
 
@@ -59,7 +59,7 @@ class Solution {
 
     }
 }
-
+```
 
 ```python
 def solutionByXOR(A):
