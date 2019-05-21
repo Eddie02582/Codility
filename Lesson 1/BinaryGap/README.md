@@ -47,6 +47,7 @@ class Solution {
         return max;
     }
 }
+```
 
 ```python
 def solution(N):
