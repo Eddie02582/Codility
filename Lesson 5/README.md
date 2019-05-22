@@ -76,7 +76,7 @@ def prefix_sums(A):
 </table>
 
 
-** 5.2: Total of one slice — O(1).**
+**5.2: Total of one slice — O(1).**
 ```python
 def count_total(P, x, y):
     return P[y + 1] - P[x]
