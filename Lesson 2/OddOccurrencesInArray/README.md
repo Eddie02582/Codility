@@ -44,29 +44,6 @@ Write an efficient algorithm for the following assumptions:</br>
 
 分析:ex:5 ^5 =0 ,利用xor取得非成對的數字
 
-
-```csharp
-using System;
-using System.Linq;
-// you can also use other imports, for example:
-// using System.Collections.Generic;
-
-// you can write to stdout for debugging purposes, e.g.
-// Console.WriteLine("this is a debug message");
-
-class Solution {	
-	
-	//O(N) or O(N*log(N))
-	public int solution(int[] A) {        
-        int sum = 0;        
-        foreach (int num in A)
-            sum ^= num;            
-        return sum;
-
-    }
-}
-```
-
 ```python
 def solutionByXOR(A):
     result = 0

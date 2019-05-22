@@ -74,10 +74,8 @@ class Solution {
             if (count == X)
                 return i;
          }
-
-         return -1;
-    }
-	
+        return -1;
+    }	
 }
 ```
 
@@ -116,26 +114,17 @@ def solution(X, A):
 
 若題目沒說加上判斷是 A[i]<=X 即可以</br>
 C#
-```csharp
-using System;
-using System.Collections.Generic;
-class Solution {
-    public int solution(int X, int[] A){ 
-	
-        HashSet<int> hash = new HashSet<int>();
-        for(int i=0;i<A.Length;i++)
-        {
-            if(A[i]<=X)
-            {
-                hash.Add(A[i]);
-                if(hash.Count == X)
-                    return i;
-            }
-        }
-        return -1;
-    }
-	
-}
+```python
+def solution(X, A):
+	S = set()
+	count = len(A)
+	for i in range(0, count):
+        if A[i]<=X:
+		S.add(A[i])
+            if(len(S) == X):
+                return i
+	return -1
+
 ```
 
 
