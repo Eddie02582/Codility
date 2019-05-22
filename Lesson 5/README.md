@@ -10,7 +10,7 @@
         <td>a<sub>2</sub></td>
         <td>....</td>
         <td>a<sub>n-1</sub></td>
-    <th>
+    </th>
 
 
 </table>
