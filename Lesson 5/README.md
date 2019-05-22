@@ -5,12 +5,12 @@
 
 <table>
     <th>
-        <td><strong>a</strong>0</td>
-        <td><strong>a</strong>1</td>
-        <td><strong>a</strong>2</td>
+        <td>a<sub>0</sub></td>
+        <td>a<sub>1</sub></td>
+        <td>a<sub>2</sub></td>
         <td>....</td>
-        <td><strong>a</strong>n-1</td>
+        <td>a<sub>n-1</sub></td>
     <th>
 
 
-<table>
+</table>
