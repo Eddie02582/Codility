@@ -54,69 +54,61 @@ Write an efficient algorithm for the following assumptions:</br>
 </ul>
 
 
+**Solution** O(m<sup>2</sup>):
+分析:利用雙重迴圈判斷
 
-分析:排序並且一一比較,注意使用XOR或SUM會有問題 Ex A=[4,4,1,1] SUM(A)=SUM([4,1,2,3]),題目沒說給陣列裡的數字只會出現一次
-
-C#
-```csharp
-using System;
-class Solution {
-  public int solution(int[] A)
-	{
-        Array.Sort(A);
-        for (int i = 0; i < A.Length; i++)
-        {
-            if ((i + 1) != A[i])
-                return 0;
-        }
-        return 1;
-    }
-	
-}
-```
-
-分析:先利用set判斷是否有無重複數字，再利用XOR 判斷 
-
-C#
-```csharp
-using System;
-using System.Collections.Generic;
-class Solution {
-    public int solution(int[] A) {
-        // write your code in C# 6.0 with .NET 4.5 (Mono)
-          HashSet<int> SetNumbers = new HashSet<int>(A);
-        if (SetNumbers.Count!=A.Length)
-            return 0;
-        
-        int sum = 0;
-        for (int i = 0; i < A.Length; i++)
-        {
-            sum ^= A[i];
-            sum ^= (i + 1);
-        }
-        return sum == 0 ? 1 : 0;
-    }
-}
-```
-python
 ```python
-def solution(A):
-    # write your code in Python 3.6
-    SetNumbers=set(A)
-    if len(set(A))!=len(A):
-        return 0
-    sum=0
-    for i,value in enumerate(A,1):
-        sum^=value
-        sum^=i
-    
-    return 1 if sum == 0 else 0;   
+
+#50%    Correctness=100% ,Performance=0%
+def solution1(A): 
+    count=0    
+    for i in range(len(A)):        
+        if A[i]==0:
+            for j in range(i,len(A)):
+                if A[j]==1:
+                   count+=1  
+    return count  
 ```
 
+**Solution** O(m<sup>2</sup>):
+分析:利用while
+
+```python
+#50%    Correctness=100% ,Performance=0%
+def solution(A): 
+    left,count=0,0
+    len_A=len(A)
+    right=len_A    
+    while left< len_A-1:
+        right-=1    
+        if A[left]==0:        
+            if A[left]!=A[right] :
+                count+=1                  
+        if A[left]==1 or left >= right-1:
+            right=len_A
+            left+=1    
+    return count
+```
+
+**Solution** O(n):
+分析:從範例來切入解題，可以看出0號向東行的車可以跟所有大於0號向西行的車作配對，2號向東行的車可以跟所有大於2號向西行的車作配對，由此可看出大於2號向西行的車都會被配對到兩次，他們既可以跟0號車配對，也可以跟2號車配對。
+    所以利用迴圈記錄目前指針到的位置以前的A[i]=0的次數,之後遇到A[i]=1,一次增加配對數 
 
 
+```python
+def solution2(A): 
+    add_base,count=0,0
+    
+    for i in range(len(A)):
+        if(A[i]==0):
+            add_base+=1
+        else:
+            count+=add_base
 
-
+    if(count > 1000000000):
+        return -1;
+    return count
+```
 
 
 
