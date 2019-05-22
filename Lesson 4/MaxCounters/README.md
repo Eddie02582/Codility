@@ -74,7 +74,7 @@ Write an efficient algorithm for the following assumptions:</br>
 
 
 ```python
-def solution2(N, A):
+def solution(N, A):
     # write your code in Python 3.6    
     B=[0]*N
     max=0
