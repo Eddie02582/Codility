@@ -33,6 +33,15 @@ Lesson 4 <a href ="https://github.com/Eddie02582/Codility/tree/master/Lesson%204
 </ul>
 
 
+Lesson 5 <a href ="https://github.com/Eddie02582/Codility/tree/master/Lesson%205">Prefix sums</a>
+<ul>
+    <li><a href ="https://github.com/Eddie02582/Codility/tree/master/Lesson%205/PassingCars">PassingCars</a></li>
+    <li><a href ="https://github.com/Eddie02582/Codility/tree/master/Lesson%205/GenomicRangeQuery">GenomicRangeQuery</a></li>
+    <li><a href ="https://github.com/Eddie02582/Codility/tree/master/Lesson%205/MinAvgTwoSlice">MinAvgTwoSlice</a></li>
+    <li><a href ="https://github.com/Eddie02582/Codility/tree/master/Lesson%205/CountDiv">CountDiv</a></li>
+</ul>
+
+
 
 
 
