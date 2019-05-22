@@ -6,9 +6,8 @@
 <table>
     <th>
         <td>a<sub>0</sub></td>
-        <td>a<sub>0</sub></td>
         <td>a<sub>1</sub></td>
-        <td>a<sub>2</sub></td>
+        <td>a<sub>2</sub></td>       
         <td>....</td>
         <td>a<sub>n-1</sub></td>
     </th>
@@ -22,3 +21,16 @@
     </tr>
 
 </table>
+
+
+python
+```python
+def prefix_sums(A):
+    n = len(A)
+    P = [0] * (n + 1)
+    for k in xrange(1, n + 1):
+        P[k] = P[k - 1] + A[k - 1]
+    return P
+
+```
+
