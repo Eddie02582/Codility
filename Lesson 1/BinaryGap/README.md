@@ -19,36 +19,6 @@ For example, given N = 1041 the function should return 5, because N has binary r
 分析:將整數N 轉成bin ，再利用雙指針紀錄計算前後'1' 的距離，並且比較
 
 
-```csharp
-using System;
-// you can also use other imports, for example:
-// using System.Collections.Generic;
-
-// you can write to stdout for debugging purposes, e.g.
-// Console.WriteLine("this is a debug message");
-
-class Solution {
-    public int solution(int N) {
-        // write your code in C# 6.0 with .NET 4.5 (Mono)
-        string strBin=Convert.ToString(N,2);
-        int max=0;
-        int left=0;
-        int right=0;
-        for (int i=0;i<strBin.Length;i++)
-        {
-            char c=strBin[i];
-            if (c=='1')
-            {
-                left=right;
-                right=i;
-                max = max>(right-left-1) ? max:right-left-1;
-            } 
-        }
-        return max;
-    }
-}
-```
-
 ```python
 def solution(N):
     strbin=bin(N)[2:]
@@ -60,3 +30,21 @@ def solution(N):
             max = right-left-1 if max <right-left-1 else max 	
     return  max
 ```
+
+
+分析:將整數N轉成bin,在後頭加入e,在字串用'1',切割,取得不包含'e',最大長度</br>
+Note:加入e的目的,避免最後一位非1
+ex:'1000010000e'.split('1')</br>
+    ['', '0000', '0000e']</br>
+
+```python		
+def solution(N):
+    bin_array=(bin(N)[2:]+'e').split('1') 
+    max=0
+    for x in bin_array:
+        if x !="" and 'e' not in x:
+            max = len(x) if max <len(x) else max 
+    return max
+    
+```
+
