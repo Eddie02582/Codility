@@ -54,7 +54,7 @@ Write an efficient algorithm for the following assumptions:</br>
 </ul>
 
 
-**Solution** O(m<sup>2</sup>):
+**Solution** O(n<sup>2</sup>):</br>
 分析:利用雙重迴圈判斷
 
 ```python
@@ -70,7 +70,7 @@ def solution1(A):
     return count  
 ```
 
-**Solution** O(m<sup>2</sup>):
+**Solution** O(n<sup>2</sup>):</br>
 分析:利用while
 
 ```python
@@ -90,7 +90,7 @@ def solution(A):
     return count
 ```
 
-**Solution** O(n):
+**Solution** O(n):</br>
 分析:從範例來切入解題，可以看出0號向東行的車可以跟所有大於0號向西行的車作配對，2號向東行的車可以跟所有大於2號向西行的車作配對，由此可看出大於2號向西行的車都會被配對到兩次，他們既可以跟0號車配對，也可以跟2號車配對。
     所以利用迴圈記錄目前指針到的位置以前的A[i]=0的次數,之後遇到A[i]=1,一次增加配對數 
 
