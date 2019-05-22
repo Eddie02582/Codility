@@ -1,4 +1,4 @@
-#Prefix sums
+# Prefix sums
 
 有一種簡單而強大的技術，可以快速計算總和,再給給定切片中的元素（數組的連續段）。</br> 
 它的主要思想是使用前綴和被定義為第一個0,1,2，...的連續總數。。。 ，n個數組元素。</br>
@@ -22,8 +22,8 @@
 
 </table>
 
+5.1: Counting prefix sums — O(n).
 
-python
 ```python
 def prefix_sums(A):
     n = len(A)
@@ -34,3 +34,43 @@ def prefix_sums(A):
 
 ```
 
+同理假設我們想取得[x,y]之間的合,0 <= x ,y <= n,其總合為a<sub>x</sub>+a<sub>1</sub>+...+a<sub>y-1</sub>+a<sub>y</sub> </br>
+
+<table>
+    <th>
+        <td>p<sub>y+1</sub></td>
+        <td>a<sub>0</sub></td>
+        <td>a<sub>1</sub></td>       
+        <td>....</td>
+        <td>a<sub>x-1</sub></td>       
+        <td>a<sub>x</sub></td>
+        <td>a<sub>x+1</sub></td>
+        <td>....</td>
+        <td>a<sub>y-1</sub></td>       
+        <td>a<sub>y</sub></td>    
+    </th>
+    <tr>
+        <td>p<sub>x</sub></td>
+        <td>a<sub>0</sub></td>
+        <td>a<sub>1</sub></td>       
+        <td>....</td>
+        <td>a<sub>x-1</sub></td>       
+        <td>a<sub>x</sub></td>
+        <td>a<sub></sub></td>
+        <td></td>
+        <td>a<sub></sub></td>       
+        <td>a<sub></sub></td>  
+    </tr>
+    <tr>
+        <td>p<sub>y+1</sub>-p<sub>x</sub></td>
+        <td></td>
+        <td></td>       
+        <td></td>
+        <td></td>       
+        <td>a<sub>x</sub></td>
+        <td>a<sub>x+1</sub></td>
+        <td>....</td>
+        <td>a<sub>y-1</sub></td>       
+        <td>a<sub>y</sub></td>  
+    </tr>
+</table>
