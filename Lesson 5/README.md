@@ -22,7 +22,7 @@
 
 </table>
 
-5.1: Counting prefix sums — O(n).
+** 5.1: Counting prefix sums — O(n).**
 
 ```python
 def prefix_sums(A):
@@ -76,7 +76,7 @@ def prefix_sums(A):
 </table>
 
 
-5.2: Total of one slice — O(1).
+** 5.2: Total of one slice — O(1).**
 ```python
 def count_total(P, x, y):
     return P[y + 1] - P[x]
@@ -96,7 +96,7 @@ The mushroom picker starts at spot k = 4 and should perform m = 6 moves. She mig
 
 k為起點,m為可移動步伐,要找到總和最大的值</br>
 
-Solution O(m<sup>2</sup>): Note that the best strategy is to move in one direction optionally followedby some moves in the opposite direction. </br>
+**Solution** O(m<sup>2</sup>): Note that the best strategy is to move in one direction optionally followedby some moves in the opposite direction. </br>
 In other words, the mushroom picker should not change direction more than once. With this observation we can find the simplest solution.</br>
 Make the first p = 0, 1, 2, . . . , m moves in one direction, then the next m − p moves in theopposite direction. </br>
 This is just a simple simulation of the moves of the mushroom picker </br>
@@ -104,12 +104,12 @@ which requires O(<sup>2</sup>)time.</br>
 
 
 
-Solution O(n+m): A better approach is to use prefix sums. If we make p moves in one direction, we can calculate the maximal opposite location of the mushroom picker.</br>
+**Solution** O(n+m): A better approach is to use prefix sums. If we make p moves in one direction, we can calculate the maximal opposite location of the mushroom picker.</br>
 The mushroom picker collects all mushrooms between these extremes. </br>
 We can calculate the total number of collected mushrooms in constant time by using prefix sums.</br>
 
 
-5.3: Mushroom picker — O(n + m)
+** 5.3: Mushroom picker — O(n + m)**
 
 ```python
 def mushrooms(A, k, m):
