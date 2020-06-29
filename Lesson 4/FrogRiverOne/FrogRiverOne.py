@@ -1,22 +1,21 @@
 def solution(X, A):
-	S = set()
-	count = len(A)
-	for i in range(0, count):
-		S.add(A[i])
-		if(len(S) == X):
-			return i
-	return -1
-    
-    
-def solution2(X, A):
-    tiles=[Fasle]*X
-    count=0  
-    for i,value in enumerate(A)	
-        index=value-i
-        if index<X and !tiles[index]:
-            count+=1
-            tiles[index]=True
-        if todo==X:		
+    numbers = set()
+    for i,n in enumerate(A):
+        numbers.add(n)
+        if len(numbers) == X:
             return i
-	return -1
     
+    return - 1
+    
+    
+def solution(X, A):
+    exist = [False] * X
+    count = 0
+    for i,n in enumerate(A):
+        if not exist[n - 1]:
+            count += 1
+        exist[n - 1] = True
+        if count == X:
+            return i
+    
+    return -1

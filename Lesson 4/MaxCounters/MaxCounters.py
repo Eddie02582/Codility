@@ -1,5 +1,5 @@
 def solution1(N, A):
-    # write your code in Python 3.6    
+    # write your code in Python 3.6 O(N + M)    
     B=[0]*N
     max=0
     for x in A:   
