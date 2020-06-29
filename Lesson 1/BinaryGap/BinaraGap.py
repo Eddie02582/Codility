@@ -10,10 +10,25 @@ def solution(N):
 	
 def solution(N):
     strbin=bin(N)[2:]
-    left,max,right=0,0,0
+    left,res,right=0,0,0
     for index,s in enumerate(strbin):
-        if s=='1':
-            left=right
-            right=index	
-            max = right-left-1 if max <right-left-1 else max 	
-    return  max
+        if s == '1':
+            left = right
+            right = index	
+            res = max(right-left-1,res)         
+    return  res
+    
+def solution(N):
+    # write your code in Python 3.6
+    binary = bin(N)[2:]
+    position = -1
+    res = 0
+    for i in range(len(binary)):
+        if binary[i] == '1':
+            if position < 0:
+                position = i
+            else:
+                res = max(res, i - position - 1)
+                position = i
+    
+    return res    
