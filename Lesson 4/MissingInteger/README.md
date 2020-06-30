@@ -25,20 +25,22 @@ Write an efficient algorithm for the following assumptions:</br>
 
 
 
-分析:建立一個bool 陣列長度為A陣列的長度,第一次迴圈判斷哪些數值存在,第二次迴圈取得不存在數字,如果都存在返回下一個數字
+分析:建立一個set用來儲存數字,迴圈從1~len(A)+1 判斷是否數字在set裡面,沒有就回傳
 
 python
 ```python
 def solution(A):
-    # write your code in Python 3.6    
-    appear=[False]*len(A)
-    for x in A:
-        if x<=len(A) and x>0:
-            appear[x-1]=True 
-    for i,bapper in enumerate(appear,1):
-        if not bapper:
-            return i;    
-    return len(A)+1  
+    # write your code in Python 3.6
+    numbers = set()
+    for n in A:
+        numbers.add(n)
+        
+    for i in range(1,len(A) + 1):
+        if i not in numbers:
+            return i
+    
+    return len(A) + 1    
+     
 ```
 
 
