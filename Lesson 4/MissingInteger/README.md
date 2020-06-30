@@ -31,6 +31,7 @@ python
 ```python
 def solution(A):
     # write your code in Python 3.6
+    #O(N) or O(N * log(N))
     numbers = set()
     for n in A:
         numbers.add(n)
