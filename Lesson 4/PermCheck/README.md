@@ -76,42 +76,16 @@ class Solution {
 }
 ```
 
-分析:先利用set判斷是否有無重複數字，再利用XOR 判斷 
-
-C#
-```csharp
-using System;
-using System.Collections.Generic;
-class Solution {
-    public int solution(int[] A) {
-        // write your code in C# 6.0 with .NET 4.5 (Mono)
-          HashSet<int> SetNumbers = new HashSet<int>(A);
-        if (SetNumbers.Count!=A.Length)
-            return 0;
-        
-        int sum = 0;
-        for (int i = 0; i < A.Length; i++)
-        {
-            sum ^= A[i];
-            sum ^= (i + 1);
-        }
-        return sum == 0 ? 1 : 0;
-    }
-}
-```
 python
 ```python
 def solution(A):
     # write your code in Python 3.6
-    SetNumbers=set(A)
-    if len(set(A))!=len(A):
-        return 0
-    sum=0
-    for i,value in enumerate(A,1):
-        sum^=value
-        sum^=i
+    numbers = set(A)    
+    for i in range(1,len(A) + 1):
+        if i not in numbers:
+            return 0
     
-    return 1 if sum == 0 else 0;   
+    return 1    
 ```
 
 

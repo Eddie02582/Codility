@@ -1,11 +1,8 @@
 def solution(A):
     # write your code in Python 3.6
-    SetNumbers=set(A)
-    if len(set(A))!=len(A):
-        return 0
-    sum=0
-    for i,value in enumerate(A,1):
-        sum^=value
-        sum^=i
+    numbers = set(A)    
+    for i in range(1,len(A) + 1):
+        if i not in numbers:
+            return 0
     
-    return 1 if sum == 0 else 0;   
+    return 1   
