@@ -69,45 +69,46 @@ Write an efficient algorithm for the following assumptions:</br>
 </ul>
 
 
-
 分析:利用迴圈,當值小於N時+1,1並取得目前最大值,當值N+1時全部更新為最大值,注意此方法只有score 88,當陣列過大時會timeout
 
-
 ```python
-def solution(N, A):
-    # write your code in Python 3.6    
-    B=[0]*N
-    max=0
-    for x in A:   
-        if x <=N:            
-            B[x-1]+=1
-            max= B[x-1] if B[x-1]> max else max
-        else if x==N+1:
-            B=[max]*N
-    return B
-```
-分析:修改上方最後在更新(N=N+1部分),若迴圈中更新需先更新到(N=N+1)在執行加1
-
-```python
-def solution(N, A):
-    # write your code in Python 3.6    
-    B=[0]*N
-    max=0
-    add=0
-    for x in A:   
-        if x <=N:
-            if B[x-1] <add:
-               B[x-1]= add+1              
-            else:
-                B[x-1]+=1  
-            max= B[x-1] if B[x-1]> max else max
+    # O(N + M)    
+    max_count = 0
+    res = [0] * N
+    for n in A:
+        if n <= N :
+            res[n - 1] += 1
+            max_count = max(max_count,res[n - 1])
         else:            
-            add=max
-     
-    for i in range(len(B)):
-        if B[i]<add:
-            B[i]=add 
-    return B
+            res = [max_count]* N
+    
+    return res  
+```
+
+分析:修改上方最後在更新(N=N+1部分),若迴圈中有値更新需先更新到(N=N+1)在執行加1
+
+```python
+def solution(N, A):
+    # write your code in Python 3.6
+    #O(N + M)
+    res = [0]* N
+    max_count = 0
+    add = 0
+    for n in A:
+        if n <= N:
+            if res[n - 1] < add:
+                res[n - 1] = add + 1
+            else:
+                res[n - 1] += 1
+            max_count = max(max_count,res[n - 1])
+        else:
+            add = max_count
+        
+    for i in range(len(res)):
+        if res[i] < add:
+            res[i] = add
+    
+    return res
 ```
 
 
