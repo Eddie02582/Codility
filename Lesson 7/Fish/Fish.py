@@ -1,3 +1,4 @@
+#https://app.codility.com/demo/results/trainingCPZD8B-NQP/
 def solution(A, B):
     mapping = {}
     for i in range(len(A)):
