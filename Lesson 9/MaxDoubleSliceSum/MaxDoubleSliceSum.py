@@ -1,5 +1,5 @@
 #https://app.codility.com/demo/results/training3F65NU-GPJ/
-def solution(A):
+def solution_onn(A):
     # write your code in Python 3.6
     if len(A) <= 3:
         return 0
@@ -23,7 +23,7 @@ def getMaxSliceValue(A):
     return res
 
 #https://app.codility.com/demo/results/trainingARPUMH-GPA/
-def solution_(A):
+def solution_dp(A):
     # write your code in Python 3.6
     if len(A) <= 3:
         return 0
@@ -43,17 +43,41 @@ def solution_(A):
 
     return max_slice
 
+#https://app.codility.com/demo/results/training5HP36X-MRF/
+def solution(A):
+    n = len(A)
+    b = [0] * n
+    temp = 0
+    for i in range(1,n):
+        temp = max(0,temp)
+        b[i] = temp 
+        temp += A[i]
+    
+    temp,result  = 0,0
+    for i in range(n - 2,0,-1):
+        temp = max(0,temp)
+        result = max(result, temp + b[i]);
+        temp += A[i]
+    
+    return result
 
 
 
-A = [5, 17, 0, 3]
+
+
+
+
+
+
+
+#A = [5, 17, 0, 3]
 B = [3,2,6,-1,4,5,-1,2]
-C = [3,2,6,-10,4,5,10,-10,10,20,30]
+#C = [3,2,6,-10,4,5,10,-10,10,20,30]
 
-solution(A)
 
-solution_(A)
-solution_(B)
+
+#solution(A)
+solution(B)
 #[4,5,10] [10,20,30] =79
 
-solution_(C)
+solution(C)

@@ -9,3 +9,13 @@ def solution(A):
         if temp < 0:
             temp = 0
     return result
+    
+def solution(A):
+    # write your code in Python 3.6
+    result,temp  = float('-inf'),0
+    for n in A:
+        if temp < 0:
+            temp = 0    
+        temp += n
+        result = max(result,temp)
+    return result
