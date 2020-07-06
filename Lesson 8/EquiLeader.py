@@ -50,8 +50,6 @@ def solution(A):
             max_value = A[i] 
 
         record2[i] = max_value
-    print (record)
-    print (record2)
     return   record  
 
 
